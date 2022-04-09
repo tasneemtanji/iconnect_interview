@@ -1,1 +1,50 @@
-hello world
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Interview Question Solution</title>
+</head>
+
+<body>
+    <h1>iConnect Interview </h1>
+
+    <p><b>Solution 1</b></p>
+    <p id="solution 1"></p>
+
+    <p><b>Solution 2</b></p>
+    <p id="solution 2"></p>
+
+    <p><b>Solution 3</b></p>
+    <p id="solution 3"></p>
+
+    <script>
+        //solution a. 
+        //Unique set of users from List1 which are not in List2 
+
+        const List1 = ['Arjun', 'Adwait', 'Swapnil', 'Amit', 'Vishal', 'Adnan'];
+        const List2 = ['Adwait', 'Laxman', 'Amit', 'Adnan', 'Nitin', 'Gaurav'];
+
+        const uniqueIn1 = List1.filter((element) => !List2.includes(element));
+
+        document.getElementById("solution 1").innerHTML = uniqueIn1;
+
+        //solution b. 
+        //Unique set of users from List2 which are not in List1
+
+        const uniqueIn2 = List2.filter((element) => !List1.includes(element));
+
+        document.getElementById("solution 2").innerHTML = uniqueIn2;
+
+        //solution c.
+        //A set of users who are present in in List1 and List2 both (intersection of list1 & list2)
+
+        const intersection = List2.filter((element) => List1.includes(element));
+
+        document.getElementById("solution 3").innerHTML = uniqueIn2;
+
+
+        console.log(uniqueIn1, uniqueIn2, intersection);
+
+    </script>
+</body>
